@@ -1,0 +1,39 @@
+Features
+Make XMLHttpRequests from the browser
+Make http requests from node.js
+Supports the Promise API
+Intercept request and response
+Transform request and response data
+Cancel requests
+Automatic transforms for JSON data
+🆕 Automatic data object serialization to multipart/form-data and x-www-form-urlencoded body encodings
+Client side support for protecting against XSRF
+
+
+
+
+
+ // `url` is the server URL that will be used for the request
+  url: '/user',
+
+  // `method` is the request method to be used when making the request
+  method: 'get', // default
+
+
+  // `headers` are custom headers to be sent
+  headers: {'X-Requested-With': 'XMLHttpRequest'},
+
+
+
+
+
+
+  // `data` is the data to be sent as the request body
+  // Only applicable for request methods 'PUT', 'POST', 'DELETE , and 'PATCH'
+  // When no `transformRequest` is set, must be of one of the following types:
+  // - string, plain object, ArrayBuffer, ArrayBufferView, URLSearchParams
+  // - Browser only: FormData, File, Blob
+  // - Node only: Stream, Buffer, FormData (form-data package)
+  data: {
+    firstName: 'Fred'
+  },
